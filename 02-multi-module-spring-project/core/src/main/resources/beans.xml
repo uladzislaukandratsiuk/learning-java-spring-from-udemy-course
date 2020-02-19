@@ -7,7 +7,7 @@
     <bean id="numberGenerator" class="example.spring.multimodule.NumberGeneratorImpl"/>
 
     <bean id="game" class="example.spring.multimodule.GameImpl">
-        <constructor-arg ref="numberGenerator"/>
+        <property name="numberGenerator" ref="numberGenerator"/>
     </bean>
 
 </beans>
