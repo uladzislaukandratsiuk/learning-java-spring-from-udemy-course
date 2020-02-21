@@ -1,5 +1,9 @@
-package example.spring.multimodule;
+package example.spring.multimodule.console;
 
+import example.spring.multimodule.core.AppConfig;
+import example.spring.multimodule.core.Game;
+import example.spring.multimodule.core.MessageGenerator;
+import example.spring.multimodule.core.NumberGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;

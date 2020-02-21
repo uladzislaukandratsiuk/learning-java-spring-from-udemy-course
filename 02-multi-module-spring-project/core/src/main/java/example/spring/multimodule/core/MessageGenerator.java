@@ -1,4 +1,4 @@
-package example.spring.multimodule;
+package example.spring.multimodule.core;
 
 public interface MessageGenerator {
 
