@@ -1,10 +1,13 @@
-package example.spring.multimodule.core;
+package example.spring.multimodule.config;
 
+import example.spring.multimodule.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 @Configuration
+@Import(GameConfig.class)
 @ComponentScan(basePackages = "example.spring.multimodule")
 public class AppConfig {
 

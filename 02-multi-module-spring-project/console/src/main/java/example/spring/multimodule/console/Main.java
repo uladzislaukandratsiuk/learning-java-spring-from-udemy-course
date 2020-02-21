@@ -1,6 +1,6 @@
 package example.spring.multimodule.console;
 
-import example.spring.multimodule.core.AppConfig;
+import example.spring.multimodule.config.AppConfig;
 import example.spring.multimodule.core.Game;
 import example.spring.multimodule.core.MessageGenerator;
 import example.spring.multimodule.core.NumberGenerator;
