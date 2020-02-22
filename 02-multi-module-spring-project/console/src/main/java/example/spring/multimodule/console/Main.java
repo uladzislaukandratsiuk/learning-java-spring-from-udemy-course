@@ -1,9 +1,6 @@
 package example.spring.multimodule.console;
 
-import example.spring.multimodule.config.AppConfig;
-import example.spring.multimodule.core.Game;
-import example.spring.multimodule.core.MessageGenerator;
-import example.spring.multimodule.core.NumberGenerator;
+import example.spring.multimodule.config.GameConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -17,20 +14,7 @@ public class Main {
 
         log.info("Guess the number game");
 
-        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-
-        NumberGenerator numberGenerator = context.getBean(NumberGenerator.class);
-
-        int number = numberGenerator.next();
-
-        log.info("number = {}", number);
-
-        Game game = context.getBean(Game.class);
-
-        MessageGenerator messageGenerator = context.getBean(MessageGenerator.class);
-
-        log.info("main message: {}", messageGenerator.getMainMessage());
-        log.info("result message: {}", messageGenerator.getResultMessage());
+        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(GameConfig.class);
 
         context.close();
     }

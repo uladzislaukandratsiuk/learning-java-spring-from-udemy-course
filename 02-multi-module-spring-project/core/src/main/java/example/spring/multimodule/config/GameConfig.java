@@ -5,10 +5,12 @@ import example.spring.multimodule.core.MaxNumber;
 import example.spring.multimodule.core.MinNumber;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
+@ComponentScan(basePackages = "example.spring.multimodule")
 @PropertySource("classpath:game.properties")
 public class GameConfig {
 
