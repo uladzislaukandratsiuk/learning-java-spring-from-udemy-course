@@ -19,6 +19,7 @@ public class TodoData {
         addItem(new TodoItem("second title", "second details", LocalDate.now()));
         addItem(new TodoItem("third title", "third details", LocalDate.now()));
         addItem(new TodoItem("fourth title", "fourth details", LocalDate.now()));
+        addItem(new TodoItem("fifth title", "fifth details", LocalDate.now()));
     }
 
     public List<TodoItem> getItems() {
