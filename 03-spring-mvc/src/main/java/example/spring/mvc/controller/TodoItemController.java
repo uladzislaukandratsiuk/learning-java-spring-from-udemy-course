@@ -1,13 +1,16 @@
 package example.spring.mvc.controller;
 
 import example.spring.mvc.model.TodoData;
+import example.spring.mvc.model.TodoItem;
 import example.spring.mvc.service.TodoItemService;
+import example.spring.mvc.util.AttributeNames;
 import example.spring.mvc.util.Mappings;
 import example.spring.mvc.util.ViewNames;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class TodoItemController {
@@ -27,5 +30,10 @@ public class TodoItemController {
     @GetMapping(Mappings.ITEMS )
     public String items() {
         return ViewNames.ITEMS_LIST;
+    }
+
+    @PostMapping(Mappings.ADD_ITEM)
+    public String processItem(@ModelAttribute(AttributeNames.TODO_ITEM) TodoItem todoItem) {
+        return "redirect:/" + Mappings.ITEMS;
     }
 }
