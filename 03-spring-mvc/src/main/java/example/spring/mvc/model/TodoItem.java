@@ -12,11 +12,11 @@ public class TodoItem {
     private int id;
     private String title;
     private String details;
-    private LocalDate deadLine;
+    private LocalDate deadline;
 
-    public TodoItem(String title, String details, LocalDate deadLine) {
+    public TodoItem(String title, String details, LocalDate deadline) {
         this.title = title;
         this.details = details;
-        this.deadLine = deadLine;
+        this.deadline = deadline;
     }
 }
