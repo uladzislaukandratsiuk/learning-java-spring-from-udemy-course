@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page import="example.spring.mvc.util.AttributeNames" %>
+<%@ page import="example.spring.mvc.util.Mappings" %>
 
 <html>
 <head>
@@ -32,6 +33,8 @@
                         <td><input type="submit" value="Submit"/></td>
                     </tr>
                 </table>
+                <c:url var="itemsLink" value="${Mappings.ITEMS}"/>
+                <a href="${itemsLink}">Show Todo Items</a>
             </form:form>
         </div>
     </body>
