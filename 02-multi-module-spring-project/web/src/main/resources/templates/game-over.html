@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/head :: headFragment}">
+<html lang="en">
+<head id="headId">
     <meta charset="UTF-8">
     <title>Game Over</title>
 </head>
@@ -9,19 +9,11 @@
 
     <h1>Guess the Number Game</h1>
     <h2>Game Over</h2>
-    <h3 th:text="${__${T(example.spring.multimodule.util.AttributeNames).RESULT_MESSAGE}__}">
-        Result Message Content
-    </h3>
+    <h3 id="result-message">Result Message Content</h3>
+    <h3><a id="restart">Play Again</a></h3>
+    <h3><a id="home-page">Home</a></h3>
 
-    <h3><a th:href="@{__${T(example.spring.multimodule.util.GameMapping).RESTART}__}">
-        Play Again</a>
-    </h3>
-
-    <h3><a th:href="@{__${T(example.spring.multimodule.util.GameMapping).HOME}__}">
-        Home</a>
-    </h3>
-
-    <footer th:replace="~{fragments/footer :: footer}">
+    <footer id="footerId">
         <p>Created by ...</p>
     </footer>
 </div>
