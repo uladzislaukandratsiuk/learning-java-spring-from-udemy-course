@@ -11,7 +11,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @ComponentScan(basePackages = "example.spring.multimodule")
-@PropertySource("classpath:game.properties")
+@PropertySource("classpath:config/game.properties")
 public class GameConfig {
 
     @Value("${game.maxNumber:50}")
